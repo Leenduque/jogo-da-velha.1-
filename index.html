@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jogo da Velha</title>
+  <link rel="stylesheet" href="style.css">
+
+  <title>Jogo da velha </title> 
+ <style>
+  body{
+    background-color: rgb(85, 95, 75);
+    color: rgb(173, 196, 173);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    font-family: 'Courier New', Courier, monospace;
+ }
+ .board{
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 5px;
+ }
+
+
+ </style>
+
+   
+</head>
+
+
+<body>
+    <h1> jogo da velha </h1>
+    <div class="tabuleiro">
+      <div class="cedula" onclick ="jogar( x)"></div>
+      <div class="cedula" onclick ="jogar(0)"></div>
+      <div class="cedula" onclick ="jogar(X)"></div>
+    </div>
+    
+
+</body>
+</html>
