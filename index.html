@@ -27,6 +27,11 @@
   gap: 5px;
  }
 
+ table {
+  color: aliceblue;
+  font-size: 80px;
+ }
+
 
  </style>
 
@@ -36,11 +41,37 @@
 
 <body>
     <h1> jogo da velha </h1>
-    <div class="tabuleiro">
-      <div class="cedula" onclick ="jogar( x)"></div>
-      <div class="cedula" onclick ="jogar(0)"></div>
-      <div class="cedula" onclick ="jogar(X)"></div>
-    </div>
+    <section>   
+    <table>
+      <tr>
+        <td id="td1" onclick="adicionarTexto(this)"></td> <td id="td2" onclick="adicionarTexto(this)"></td> <td id="td3" onclick="adicionarTexto(this)"></td>
+      </tr>
+      
+      <tr>       
+        <td id="td4" onclick="adicionarTexto(this)"></td> <td id="td5" onclick="adicionarTexto(this)"></td> <td id="td6" onclick="adicionarTexto(this)"></td>
+      </tr>
+
+      <tr>
+        <td id="td7" onclick="adicionarTexto(this)"></td> <td id="td8" onclick="adicionarTexto(this)"></td> <td id="td9" onclick="adicionarTexto(this)"></td>
+      </tr>
+
+      <button onclick="recet()">reiniciar</button>
+    </section>
+
+    <script>
+
+      var playerText = "x"
+      function adicionarTexto(thetd) {
+        if ( thetd.innerText ==="") {
+          thetd.innerText = playerText;
+          playerText = playerText === "x" ? "o": "x";
+          checkerVitoria()
+        }
+      }
+      
+    </script>
+    
+    
     
 
 </body>
